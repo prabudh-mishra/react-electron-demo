@@ -1,7 +1,17 @@
 {
   "name": "react-electron",
   "version": "0.1.0",
+  "author": "Prabudh Mishra",
+  "description": "A Test electron application bootstrapped with React",
+  "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prabudh-mishra/react-electron-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prabudh-mishra/react-electron-demo/issues"
+  },
   "dependencies": {
     "@electron/remote": "^2.0.8",
     "@testing-library/jest-dom": "^5.16.4",
@@ -14,7 +24,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "main": "public/main.js",
+  "main": "public/electron.js",
   "homepage": "./",
   "scripts": {
     "start": "react-scripts start",
@@ -22,21 +32,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron:serve": "concurrently -k \"cross-env BROWSER=none npm start\" \"npm run electron:start\"",
-    "electron:build": "yarn build && electron-builder -c.extraMetadata.main=build/main.js",
+    "postinstall": "electron-builder install-app-deps",
+    "electron:build": "npm run build && electron-builder -mwl -c.extraMetadata.main=build/electron.js",
+    "electron:build-os": "npm run build && electron-builder -c.extraMetadata.main=build/electron.js",
     "electron:start": "wait-on tcp:3000 && electron ."
-  },
-  "build": {
-    "extends": null,
-    "appId": "com.example.react-electron",
-    "files": [
-      "dist/**/*",
-      "build/**/*",
-      "node_modules/**/*",
-      "package.json"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    }
   },
   "eslintConfig": {
     "extends": [
