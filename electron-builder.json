@@ -6,10 +6,8 @@
         "buildResources": "assets"
     },
     "files": [
-        "dist/**/*",
         "build/**/*",
-        "node_modules/**/*",
-        "package.json"
+        "node_modules/**/*"
     ],
     "dmg": {
         "background": null,
