@@ -1,6 +1,6 @@
 {
   "name": "react-electron",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "author": "Prabudh Mishra",
   "description": "A Test electron application bootstrapped with React",
   "license": "MIT",
@@ -23,6 +23,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
+    "update-electron-app": "^2.0.1",
     "web-vitals": "^2.1.4"
   },
   "main": "public/electron.js",

@@ -7,3 +7,6 @@
 .icon-file {
   width: 0.75em;
 }
+tbody > tr:hover {
+  background-color: #dddddd;
+}
